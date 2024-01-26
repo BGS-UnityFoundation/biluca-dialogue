@@ -1,4 +1,6 @@
-﻿namespace BilucaDialogue.Tests
+﻿using BilucaDialogue.Helpers;
+
+namespace BilucaDialogue.Tests
 {
     internal class DialogueFlowTests
     {
@@ -22,13 +24,24 @@
             dialogue.Add(n2);
 
             var manager = new DialogueManager();
+
+            var onNextTest = new EventTest<DialogueNode>(manager, nameof(manager.OnNext));
+            var onEndTest = new EventTest(manager, nameof(manager.OnEnd));
+
             manager.Start(dialogue);
 
             manager.Next();
+
             Assert.That(manager.IsFinished, Is.False);
 
             manager.Next();
-            Assert.That(manager.IsFinished, Is.True);
+
+            Assert.Multiple(() => {
+                Assert.That(manager.IsFinished, Is.True);
+                Assert.That(onNextTest.TriggerCount, Is.EqualTo(2));
+                Assert.That(onNextTest.Parameter, Is.EqualTo(n2));
+                Assert.That(onEndTest.WasTriggered, Is.True);
+            });
         }
     }
 }
