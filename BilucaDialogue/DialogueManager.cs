@@ -23,7 +23,7 @@ namespace BilucaDialogue
             if(currentDialogue == null || currentDialogueNode == null)
                 throw new InvalidOperationException("Nenhum diálogo foi iniciado");
 
-            var nextNodes = currentDialogue?
+            var nextNodes = currentDialogue
                 .GetNextDialogueNodes(currentDialogueNode)
                 .ToArray();
 
