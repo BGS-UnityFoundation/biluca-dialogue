@@ -1,9 +1,13 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <PackageTags>gameplay</PackageTags>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/BGS-UnityFoundation/biluca-dialogue</RepositoryUrl>
+    <Description>Sistema pronto para a implementação de diálogos em jogos.</Description>
   </PropertyGroup>
 
 </Project>
