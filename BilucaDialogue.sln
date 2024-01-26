@@ -3,7 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33414.496
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BilucaDialogue", "BilucaDialogue\BilucaDialogue.csproj", "{AEA7282E-F58C-4B41-AEAA-F2494861D7C6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BilucaDialogue", "BilucaDialogue\BilucaDialogue.csproj", "{AEA7282E-F58C-4B41-AEAA-F2494861D7C6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BilucaDialogue.Tests", "BilucaDialogue.Tests\BilucaDialogue.Tests.csproj", "{1524BA4B-FC1E-4EEE-87A6-9C1F4B2627BA}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AEA7282E-F58C-4B41-AEAA-F2494861D7C6} = {AEA7282E-F58C-4B41-AEAA-F2494861D7C6}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +20,10 @@ Global
 		{AEA7282E-F58C-4B41-AEAA-F2494861D7C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AEA7282E-F58C-4B41-AEAA-F2494861D7C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AEA7282E-F58C-4B41-AEAA-F2494861D7C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1524BA4B-FC1E-4EEE-87A6-9C1F4B2627BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1524BA4B-FC1E-4EEE-87A6-9C1F4B2627BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1524BA4B-FC1E-4EEE-87A6-9C1F4B2627BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1524BA4B-FC1E-4EEE-87A6-9C1F4B2627BA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
