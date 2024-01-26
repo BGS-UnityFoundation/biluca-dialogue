@@ -3,10 +3,10 @@ namespace BilucaDialogue
     public class DialogueNode
     {
         public Guid Id { get; private set; }
-        private Spearker spearker;
+        private Spearker? spearker;
         private string text;
-        private List<Guid> nextDialogueNodes = new List<Guid>();
-        private List<Guid> previousDialogueNodes = new List<Guid>();
+        private readonly List<Guid> nextDialogueNodes = new();
+        private readonly List<Guid> previousDialogueNodes = new();
 
         public DialogueNode()
         {
@@ -14,7 +14,7 @@ namespace BilucaDialogue
             text = "example";
         }
 
-        public Spearker Spearker {
+        public Spearker? Spearker {
             get { return spearker; }
             set { spearker = value; }
         }
